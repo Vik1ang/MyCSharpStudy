@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGeneric", "MyGeneric\MyGe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyReflection", "MyReflection\MyReflection.csproj", "{90DC25D4-ED78-42D3-B90F-EF1306599913}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAttribute", "MyAttribute\MyAttribute.csproj", "{0D037284-FD65-4F47-A92A-13632D8DF6B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{90DC25D4-ED78-42D3-B90F-EF1306599913}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90DC25D4-ED78-42D3-B90F-EF1306599913}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90DC25D4-ED78-42D3-B90F-EF1306599913}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D037284-FD65-4F47-A92A-13632D8DF6B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D037284-FD65-4F47-A92A-13632D8DF6B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D037284-FD65-4F47-A92A-13632D8DF6B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D037284-FD65-4F47-A92A-13632D8DF6B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
