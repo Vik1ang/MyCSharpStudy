@@ -41,7 +41,6 @@ public class Program
                 Constraint.Show<People>(people);
                 Constraint.Show<Chinese>(chinese);
                 // Constraint.Show(Japanese);
-                
             }
         }
         catch (Exception e)

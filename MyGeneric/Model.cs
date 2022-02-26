@@ -58,6 +58,7 @@ public class Japanese : ISports
 {
     public int Id { get; set; }
     public string Name { get; set; }
+
     public void PingPong()
     {
         Console.WriteLine("打乒乓球");
