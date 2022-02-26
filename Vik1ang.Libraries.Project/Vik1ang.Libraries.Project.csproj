@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Vik1ang.Framework\Vik1ang.Framework.csproj" />
+    <ProjectReference Include="..\Vik1ang.Libraries.DAL\Vik1ang.Libraries.DAL.csproj" />
+    <ProjectReference Include="..\Vik1ang.Libraries.IDAL\Vik1ang.Libraries.IDAL.csproj" />
+    <ProjectReference Include="..\Vik1ang.Libraries.Model\Vik1ang.Libraries.Model.csproj" />
+  </ItemGroup>
+
+</Project>
