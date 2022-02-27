@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using Vik1ang.Framework;
 using Vik1ang.Framework.AttributeExtend;
-using Vik1ang.Libraries.Model;
+using Vik1ang.Framework.Model;
 
 namespace Vik1ang.Libraries.DAL
 {
@@ -19,8 +19,9 @@ namespace Vik1ang.Libraries.DAL
         public T Find<T>(int id) where T : BaseModel
         {
             Type type = typeof(T);
-            string columnString = string.Join(",", type.GetProperties().Select(p => $"[{p.GetColumnName()}]"));
-            string sql = $"SELECT {columnString} FROM [{type.Name}] WHERE Id = {id}";
+            //string columnString = string.Join(",", type.GetProperties().Select(p => $"[{p.GetColumnName()}]"));
+            //string sql = $"SELECT {columnString} FROM [{type.Name}] WHERE Id = {id}";
+            string sql = $"{TSqlHelper<T>.FindSql}{id}";
             T t = (T)Activator.CreateInstance(type);
             using (SqlConnection connection = new SqlConnection(StaticConstant.SqlServerConnString))
             {
@@ -37,8 +38,9 @@ namespace Vik1ang.Libraries.DAL
         public List<T> FindAll<T>() where T : BaseModel
         {
             Type type = typeof(T);
-            string columnString = string.Join(",", type.GetProperties().Select(p => $"[{p.GetColumnName()}]"));
-            string sql = $"SELECT {columnString} FROM [{type.Name}]";
+            //string columnString = string.Join(",", type.GetProperties().Select(p => $"[{p.GetColumnName()}]"));
+            //string sql = $"SELECT {columnString} FROM [{type.Name}]";
+            string sql = TSqlHelper<T>.FindAllSql;
             T t = (T)Activator.CreateInstance(type);
             List<T> list = new List<T>();
             using (SqlConnection connection = new SqlConnection(StaticConstant.SqlServerConnString))
@@ -54,6 +56,10 @@ namespace Vik1ang.Libraries.DAL
 
         public void Update<T>(T t) where T : BaseModel
         {
+            if (!t.Validate<T>())
+            {
+                throw new Exception("数据不正确");
+            }
             Type type = typeof(T);
             string columnString = string.Join(",",
                 type.GetProperties().Select(p => $"[{p.GetColumnName()}]=@{p.GetColumnName()}"));

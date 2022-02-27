@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("Vik1ang.Libraries.IDAL")]
+[assembly: AssemblyTitle("Vik1ang.Libraries.Factory")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Vik1ang.Libraries.IDAL")]
+[assembly: AssemblyProduct("Vik1ang.Libraries.Factory")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("fad178bd-a6a9-4af7-8cf1-7d15623674c9")]
+[assembly: Guid("fcae3d9c-33f4-4702-8033-7d2f28010dd7")]
 
 // 程序集的版本信息由下列四个值组成:
 //

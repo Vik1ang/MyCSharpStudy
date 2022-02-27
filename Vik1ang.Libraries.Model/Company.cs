@@ -1,4 +1,5 @@
 ﻿using System;
+using Vik1ang.Framework.Model;
 
 namespace Vik1ang.Libraries.Model
 {

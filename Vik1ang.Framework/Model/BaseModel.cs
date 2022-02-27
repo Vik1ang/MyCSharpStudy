@@ -1,4 +1,4 @@
-﻿namespace Vik1ang.Libraries.Model
+﻿namespace Vik1ang.Framework.Model
 {
     public class BaseModel
     {

@@ -1,4 +1,7 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
+using Vik1ang.Framework.AttributeExtend.Validate;
+using Vik1ang.Framework.Model;
 
 namespace Vik1ang.Framework.AttributeExtend
 {
@@ -14,6 +17,24 @@ namespace Vik1ang.Framework.AttributeExtend
             }
 
             return propertyInfo.Name;
+        }
+
+        public static bool Validate<T>(this T tModel) where T : BaseModel
+        {
+            Type type = tModel.GetType();
+            foreach (PropertyInfo propertyInfo in type.GetProperties())
+            {
+                object[] customAttributes = propertyInfo.GetCustomAttributes(typeof(AbstractValidateAttribute), true);
+                foreach (AbstractValidateAttribute attribute in customAttributes)
+                {
+                    if (!attribute.Validate(tModel))
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            return true;
         }
     }
 }

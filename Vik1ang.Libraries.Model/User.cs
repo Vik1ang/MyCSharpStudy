@@ -1,5 +1,7 @@
 ﻿using System;
 using Vik1ang.Framework.AttributeExtend;
+using Vik1ang.Framework.AttributeExtend.Validate;
+using Vik1ang.Framework.Model;
 
 namespace Vik1ang.Libraries.Model
 {
@@ -8,8 +10,13 @@ namespace Vik1ang.Libraries.Model
         public string Name { get; set; }
         public string Account { get; set; }
         public string Password { get; set; }
+
+        [Email]
         public string Email { get; set; }
+
+        [Phone]
         public string Mobile { get; set; }
+
         public int CompanyId { get; set; }
         public string CompanyName { get; set; }
 

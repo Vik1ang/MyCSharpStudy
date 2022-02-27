@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="BaseDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TSqlHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Vik1ang.Framework\Vik1ang.Framework.csproj">

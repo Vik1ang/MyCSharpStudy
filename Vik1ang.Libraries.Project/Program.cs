@@ -1,7 +1,4 @@
-﻿using Vik1ang.Libraries.DAL;
-using Vik1ang.Libraries.Model;
-
-namespace Vik1ang.Libraries.Project;
+﻿namespace Vik1ang.Libraries.Project;
 
 internal class Program
 {
