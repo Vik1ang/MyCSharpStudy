@@ -46,5 +46,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vik1ang.Framework\Vik1ang.Framework.csproj">
+      <Project>{BF6B2531-B7CA-4008-B3B8-BE770D824B0E}</Project>
+      <Name>Vik1ang.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

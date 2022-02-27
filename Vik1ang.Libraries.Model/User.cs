@@ -1,4 +1,5 @@
 ﻿using System;
+using Vik1ang.Framework.AttributeExtend;
 
 namespace Vik1ang.Libraries.Model
 {
@@ -11,7 +12,10 @@ namespace Vik1ang.Libraries.Model
         public string Mobile { get; set; }
         public int CompanyId { get; set; }
         public string CompanyName { get; set; }
+
+        [Column("State")]
         public int Status { get; set; }
+
         public int UserType { get; set; }
         public DateTime LastLoginTime { get; set; }
         public int CreatorId { get; set; }
