@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vik1ang.Libraries.IDAL", "V
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vik1ang.Libraries.Factory", "Vik1ang.Libraries.Factory\Vik1ang.Libraries.Factory.csproj", "{FCAE3D9C-33F4-4702-8033-7D2F28010DD7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDelegateEvent", "MyDelegateEvent\MyDelegateEvent.csproj", "{37C46306-0349-4EAF-8201-D4E29B0C7BDB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{FCAE3D9C-33F4-4702-8033-7D2F28010DD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCAE3D9C-33F4-4702-8033-7D2F28010DD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCAE3D9C-33F4-4702-8033-7D2F28010DD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37C46306-0349-4EAF-8201-D4E29B0C7BDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37C46306-0349-4EAF-8201-D4E29B0C7BDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37C46306-0349-4EAF-8201-D4E29B0C7BDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37C46306-0349-4EAF-8201-D4E29B0C7BDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
