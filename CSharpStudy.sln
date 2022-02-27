@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vik1ang.Libraries.Factory",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDelegateEvent", "MyDelegateEvent\MyDelegateEvent.csproj", "{37C46306-0349-4EAF-8201-D4E29B0C7BDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vik1ang.Study", "Vik1ang.Study\Vik1ang.Study.csproj", "{6233A6CB-6E70-468A-93DD-FCF66B9CFB52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{37C46306-0349-4EAF-8201-D4E29B0C7BDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37C46306-0349-4EAF-8201-D4E29B0C7BDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37C46306-0349-4EAF-8201-D4E29B0C7BDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6233A6CB-6E70-468A-93DD-FCF66B9CFB52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6233A6CB-6E70-468A-93DD-FCF66B9CFB52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6233A6CB-6E70-468A-93DD-FCF66B9CFB52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6233A6CB-6E70-468A-93DD-FCF66B9CFB52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
