@@ -82,6 +82,30 @@
     <Compile Include="MyForm\MyForm4_3.Designer.cs">
       <DependentUpon>MyForm4_3.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyForm\MyForm5_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\MyForm5_1.Designer.cs">
+      <DependentUpon>MyForm5_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\MyForm5_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\MyForm5_2.Designer.cs">
+      <DependentUpon>MyForm5_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\MyForm5_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\MyForm5_3.Designer.cs">
+      <DependentUpon>MyForm5_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\MyForm5_4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\MyForm5_4.Designer.cs">
+      <DependentUpon>MyForm5_4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MyForm\MyForm3_1.resx">
@@ -95,6 +119,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm\MyForm4_3.resx">
       <DependentUpon>MyForm4_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\MyForm5_1.resx">
+      <DependentUpon>MyForm5_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\MyForm5_2.resx">
+      <DependentUpon>MyForm5_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\MyForm5_3.resx">
+      <DependentUpon>MyForm5_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\MyForm5_4.resx">
+      <DependentUpon>MyForm5_4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

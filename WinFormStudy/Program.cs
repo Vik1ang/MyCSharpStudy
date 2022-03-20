@@ -18,9 +18,15 @@ namespace WinFormStudy
             //MyForm2_3 myForm2_3 = new MyForm2_3();
             //MyForm3_1 myForm3_1 = new MyForm3_1();
             //MyForm3_2 myForm3_2 = new MyForm3_2();
+
             //var myForm = new MyForm4_1();
             //var myForm = new MyForm4_2();
-            var myForm = new MyForm4_3();
+            //var myForm = new MyForm4_3();
+
+            //var myForm = new MyForm5_1();
+            //var myForm = new MyForm5_2();
+            //var myForm = new MyForm5_3();
+            var myForm = new MyForm5_4();
 
             Application.Run(myForm);
         }
