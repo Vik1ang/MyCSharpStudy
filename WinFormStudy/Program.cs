@@ -26,8 +26,9 @@ namespace WinFormStudy
             //var myForm = new MyForm5_1();
             //var myForm = new MyForm5_2();
             //var myForm = new MyForm5_3();
-            var myForm = new MyForm5_4();
+            //var myForm = new MyForm5_4();
 
+            var myForm = new MyForm6_2();
             Application.Run(myForm);
         }
     }
