@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGeneric", "MyGeneric\MyGeneric.csproj", "{8FE77C15-B020-4CEF-8120-FD9B5377E214}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyReflection", "MyReflection\MyReflection.csproj", "{90DC25D4-ED78-42D3-B90F-EF1306599913}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyReflection", "MyReflection\MyReflection.csproj", "{90DC25D4-ED78-42D3-B90F-EF1306599913}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAttribute", "MyAttribute\MyAttribute.csproj", "{0D037284-FD65-4F47-A92A-13632D8DF6B7}"
 EndProject
@@ -46,6 +46,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAsyncThread", "MyAsyncThread\MyAsyncThread.csproj", "{356AAB97-D6CF-4317-8609-4CF18B502B8B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormStudy", "WinFormStudy\WinFormStudy.csproj", "{A7C00EAB-856A-4664-B8E6-A3D2389528DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leetcode", "Leetcode\Leetcode.csproj", "{F2E88EE3-1807-475A-831C-92859A569D5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -109,6 +111,10 @@ Global
 		{A7C00EAB-856A-4664-B8E6-A3D2389528DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7C00EAB-856A-4664-B8E6-A3D2389528DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7C00EAB-856A-4664-B8E6-A3D2389528DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2E88EE3-1807-475A-831C-92859A569D5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2E88EE3-1807-475A-831C-92859A569D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2E88EE3-1807-475A-831C-92859A569D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2E88EE3-1807-475A-831C-92859A569D5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
