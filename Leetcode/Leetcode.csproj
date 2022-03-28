@@ -9,6 +9,8 @@
 
   <ItemGroup>
     <Folder Include="Solution\q1\" />
+    <Folder Include="Solution\q2\" />
+    <Folder Include="DataStructure\" />
   </ItemGroup>
 
 </Project>
