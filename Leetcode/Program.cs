@@ -1,8 +1,5 @@
-﻿using Leetcode.Solution.q1;
+﻿
+using Leetcode.Solution.q3;
 
-int[] res = new Solution().TwoSum(new int[]{ 2, 7, 11, 15 }, 9);
-
-foreach (var re in res)
-{
-    Console.WriteLine(re);
-}
+int res = new Solution().LengthOfLongestSubstring("abcabcbb");
+Console.WriteLine(res);
