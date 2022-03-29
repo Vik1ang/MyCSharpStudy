@@ -4,8 +4,11 @@ using MyUtility.Tools;
 var userIp = Tools.GetIpAddress();
 Console.WriteLine(userIp);
 
-DateTime dt = TimeHelper.GetTimeByTimeStamp("1648545498");
+DateTime dt = TimeHelper.GetTimeByTimeStamp(TimeHelper.DataTimeToTimeStamp(DateTime.Now));
 Console.WriteLine(dt.ToString());
 
-string ts = TimeHelper.DataTimeToTimeStamp(new DateTime());
-Console.WriteLine(ts);
+Console.WriteLine(TimeHelper.GetMonthLastDate(2022, 3));
+
+Console.WriteLine(TimeHelper.GetFormatDate(DateTime.Now));
+Console.WriteLine(TimeHelper.GetFormatTime(DateTime.Now));
+Console.WriteLine(TimeHelper.SecondToMinute(121));
