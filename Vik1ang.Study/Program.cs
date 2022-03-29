@@ -1,4 +1,11 @@
-﻿using MyUtility.StringHelper;
+﻿using MyUtility.TimeHelper;
+using MyUtility.Tools;
 
-string md5 = StringHelper.GetMD5("jdisadjisodja");
-Console.WriteLine(md5);
+var userIp = Tools.GetIpAddress();
+Console.WriteLine(userIp);
+
+DateTime dt = TimeHelper.GetTimeByTimeStamp("1648545498");
+Console.WriteLine(dt.ToString());
+
+string ts = TimeHelper.DataTimeToTimeStamp(new DateTime());
+Console.WriteLine(ts);
