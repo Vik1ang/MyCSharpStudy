@@ -150,7 +150,7 @@ public class TimeHelper
     /// </summary>
     /// <param name="t1"></param>
     /// <param name="t2"></param>
-    /// <returns></returns>
+    /// <returns>间隔日期之间的 随机日期</returns>
     public static DateTime GetRandomTime(DateTime t1, DateTime t2)
     {
         Random random = new Random();
@@ -199,5 +199,194 @@ public class TimeHelper
         int i = random.Next(System.Math.Abs(maxValue));
 
         return minTime.AddSeconds(i);
+    }
+
+    /// <summary>
+    /// 将String转换为DateTime?类型
+    /// </summary>
+    /// <param name="date"></param>
+    /// <returns></returns>
+    public static DateTime? ParseToDateTime(string date)
+    {
+        if (string.IsNullOrEmpty(date)) return null;
+        if (!DateTime.TryParse(date, out DateTime dt)) return null;
+        return dt;
+    }
+
+    /// <summary>
+    /// 格式化日期 {0:yyyy-MM-dd}
+    /// </summary>
+    /// <param name="date"></param>
+    /// <returns></returns>
+    public static string FormatDate(string date)
+    {
+        DateTime? dt = ParseToDateTime(date);
+        if (dt == null) return string.Empty;
+        return $"{dt:yyyy-MM-dd}";
+    }
+
+    /// <summary>
+    /// 格式化日期 {0:yyyy-MM-dd}
+    /// </summary>
+    /// <param name="date"></param>
+    /// <returns></returns>
+    public static string FormatDate(DateTime? date)
+    {
+        return date == null ? string.Empty : $"{date:yyyy-MM-dd}";
+    }
+
+    /// <summary>
+    /// 指定的日期格式格式化日期
+    /// </summary>
+    /// <param name="dt"></param>
+    /// <param name="dateFormat"></param>
+    /// <returns></returns>
+    public static string FormatDateTime(DateTime dt, string dateFormat)
+    {
+        string result = null!;
+        try
+        {
+            result = dt.ToString(dateFormat);
+        }
+        catch
+        {
+            // ignored
+        }
+
+        return result;
+    }
+
+    /// <summary>
+    /// 获取两个时间差：返回 年
+    /// </summary>
+    /// <param name="dt1"></param>
+    /// <param name="dt2"></param>
+    /// <returns></returns>
+    public static double GetYearsBetweenTwoDate(DateTime? dt1, DateTime? dt2)
+    {
+        if (dt1 == null || dt2 == null) return 0;
+        int months = GetMonthsBetweenTwoDate(dt1, dt2);
+
+        double years = months / 12d;
+        return double.Parse($"{years:N2}");
+    }
+
+    /// <summary>
+    /// 获取两个时间差：返回 月
+    /// </summary>
+    /// <param name="dt1"></param>
+    /// <param name="dt2"></param>
+    /// <returns></returns>
+    public static int GetMonthsBetweenTwoDate(DateTime? dt1, DateTime? dt2)
+    {
+        if (dt1 == null || dt2 == null) return 0;
+        int months = ((dt2.Value.Year - dt1.Value.Year) * 12) + (dt2.Value.Month - dt1.Value.Month);
+        // 如果天数还没到，月数要减1
+        if (dt2.Value.Day < dt1.Value.Day)
+        {
+            months--;
+        }
+
+        return months;
+    }
+
+    /// <summary>
+    /// 获取两个时间差：返回 天
+    /// </summary>
+    /// <param name="dt1"></param>
+    /// <param name="dt2"></param>
+    /// <returns></returns>
+    public static int GetDaysBetweenTwoDate(DateTime? dt1, DateTime? dt2)
+    {
+        if (dt1 == null || dt2 == null) return 0;
+        TimeSpan timeSpan = dt2.Value.Subtract(dt1.Value);
+        return int.Parse(timeSpan.Days.ToString());
+    }
+
+    /// <summary>
+    /// 获取季度的开始日期
+    /// </summary>
+    /// <param name="year"></param>
+    /// <param name="quarter"></param>
+    /// <returns></returns>
+    public static DateTime? GetStartDateOfQuarter(int year, int quarter)
+    {
+        string strDt = year.ToString() + "-" + ((quarter - 1) * 3 + 1) + "-1";
+        return ParseToDateTime(strDt);
+    }
+
+    /// <summary>
+    /// 获取季度的结束日期
+    /// </summary>
+    /// <param name="year"></param>
+    /// <param name="quarter"></param>
+    /// <returns></returns>
+    public static DateTime? GetEndDateOfQuarter(int year, int quarter)
+    {
+        DateTime? dtStart = GetStartDateOfMonth(year, quarter);
+        return dtStart?.AddMonths(3).AddDays(-1);
+    }
+
+    /// <summary>
+    /// 获取日期对应的季度
+    /// </summary>
+    /// <param name="date"></param>
+    /// <returns></returns>
+    public static int GetQuarter(DateTime date)
+    {
+        if ((date.Month % 3) > 0)
+        {
+            return (date.Month / 3 + 1);
+        }
+
+        return date.Month / 3;
+    }
+
+    /// <summary>
+    /// 获取月份的开始日期
+    /// </summary>
+    /// <param name="year"></param>
+    /// <param name="month"></param>
+    /// <returns></returns>
+    public static DateTime? GetStartDateOfMonth(int year, int month)
+    {
+        string strDt = year.ToString() + "-" + month.ToString() + "-1";
+        return ParseToDateTime(strDt);
+    }
+
+    /// <summary>
+    /// 获取月份的结束日期
+    /// </summary>
+    /// <param name="year"></param>
+    /// <param name="month"></param>
+    /// <returns></returns>
+    public static DateTime? GetEndDateOfMonth(int year, int month)
+    {
+        DateTime? startDt = GetStartDateOfMonth(year, month);
+        return startDt?.AddMonths(1).AddDays(-1);
+    }
+
+    public static int WeekOfMonth(DateTime day, int weekStart)
+    {
+        //WeekStart
+        //1表示 周一至周日 为一周
+
+        //2表示 周日至周六 为一周
+
+        var firstOfMonth = Convert.ToDateTime(day.Date.Year + "-" + day.Date.Month + "-" + 1);
+
+        int i = (int)firstOfMonth.Date.DayOfWeek;
+        if (i == 0)
+        {
+            i = 7;
+        }
+
+        return weekStart switch
+        {
+            1 => (day.Date.Day + i - 2) / 7 + 1,
+            2 => (day.Date.Day + i - 1) / 7,
+            _ => 0
+        };
+        //错误返回值0
     }
 }
