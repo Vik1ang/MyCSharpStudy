@@ -15,6 +15,7 @@
     <Folder Include="Solution\q4\" />
     <Folder Include="Solution\q5\" />
     <Folder Include="Solution\q6\" />
+    <Folder Include="Solution\q7\" />
   </ItemGroup>
 
 </Project>
