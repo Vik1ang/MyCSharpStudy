@@ -1,5 +1,5 @@
 ﻿
-using Leetcode.Solution.q3;
+using Leetcode.Solution.q6;
 
-int res = new Solution().LengthOfLongestSubstring("abcabcbb");
+var res = new Solution().Convert("PAYPALISHIRING", 3);
 Console.WriteLine(res);
